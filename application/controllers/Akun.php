@@ -9,7 +9,7 @@ class Akun extends CI_Controller
     }
 
     public function _cek(){
-        if($this->session->userdata('role')!="1") redirect(base_url());
+        if($this->session->userdata('username')=="") redirect(base_url());
     }
 
     public function index()

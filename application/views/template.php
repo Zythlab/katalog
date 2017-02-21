@@ -14,10 +14,6 @@
 	<link rel="stylesheet" media="screen" href="<?php echo base_url('assets')?>/css/jquery-ui.min.css">
     <!-- DATA TABLES -->
     <link href="<?php echo base_url('assets');?>/plugins/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
-    <!-- jvectormap -->
-    <link href="<?php echo base_url('assets');?>/plugins/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
-    <!-- Daterange picker -->
-    <link href="<?php echo base_url('assets');?>/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
     <!-- Date picker -->
     <link href="<?php echo base_url('assets');?>/plugins/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
@@ -75,24 +71,12 @@
       <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-          <!-- Sidebar user panel -->
-          <div class="user-panel">
-			<div class="pull-left image">
-				<!--<img src="<?php echo base_url($this->session->userdata('pict'));?>" class="img-circle" alt="User Image" /> -->
-			</div>
-			<div class="pull-left info">
-				<p><a href="<?php echo base_url('users/profile')?>"><?php echo $this->session->userdata('username')?></p>
-				<i class="fa fa-circle text-success"></i> Online</a>
-			</div>
-          </div>
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-              <li><a href="<?php echo base_url('dashboard')?>"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-                        <li class="header">Manajemen Barang Masuk</li>
-                        <li><a href="<?php echo base_url('katalog')?>"><i class="fa fa-male"></i>Katalog</a></li>
-                        <li><a href="<?php echo base_url('akun')?>"><i class="fa fa-legal"></i>Manajemen Akun</a></li>
-                        <li><a href="<?php echo base_url('kategori')?>"><i class="fa fa-legal"></i>Kategori</a></li>
-
+            <li><a href="<?php echo base_url('katalog')?>"><i class="fa fa-male"></i>Katalog</a></li>
+            <li><a href="<?php echo base_url('akun')?>"><i class="fa fa-legal"></i>Manajemen Akun</a></li>
+            <li><a href="<?php echo base_url('kategori')?>"><i class="fa fa-legal"></i>Kategori</a></li>
+            <li><a href="<?php echo base_url('website')?>"><i class="fa fa-legal"></i>Konfigurasi Website</a></li>
           </ul>
 
         </section>
@@ -135,19 +119,13 @@
 
     </div><!-- ./wrapper -->
 
-    <!-- Sparkline -->
-    <script src="<?php echo base_url('assets');?>/plugins/sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
     <!-- DATA TABES SCRIPT -->
     <script src="<?php echo base_url('assets');?>/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
     <script src="<?php echo base_url('assets');?>/plugins/datatables/jquery.dataTables.columnFilter.js" type="text/javascript"></script>
     <script src="<?php echo base_url('assets');?>/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
-    <!-- daterangepicker -->
-    <script src="<?php echo base_url('assets');?>/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
     <!-- datepicker -->
     <script src="<?php echo base_url('assets');?>/plugins/datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
     <script src="<?php echo base_url('assets');?>/plugins/chartjs/Chart.min.js"></script>
-    <!-- iCheck -->
-    <script src="<?php echo base_url('assets');?>/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
   </body>
 </html>
 <style>.datepicker{z-index:1200 !important;}</style>

@@ -9,7 +9,7 @@ class Kategori extends CI_Controller
     }
 
     public function _cek(){
-        // if($this->session->userdata('role')!="1") redirect(base_url());
+        if($this->session->userdata('username')=="") redirect(base_url());
     }
 
     public function index()
@@ -30,7 +30,7 @@ class Kategori extends CI_Controller
             $no++;
             $row = array();
             $row[] = $no;
-            $row[] = $person->nama;
+            $row[] = $person->nama_kat;
             
             //add html for action
             $row[] = '<a class="btn btn-flat btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="edit_person('."'".$person->id_kategori."'".')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>

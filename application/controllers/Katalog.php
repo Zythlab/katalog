@@ -9,7 +9,7 @@ class Katalog extends CI_Controller
     }
 
     public function _cek(){
-        // if($this->session->userdata('role')!="1") redirect(base_url());
+        if($this->session->userdata('username')=="") redirect(base_url());
     }
 
     public function index()
@@ -32,7 +32,8 @@ class Katalog extends CI_Controller
             $row = array();
             $row[] = $no;
             $row[] = $person->nama;
-            $row[] = $person->harga;
+            $harga = number_format($person->harga);
+            $row[] = str_replace(',', '.', $harga);
             $row[] = $person->kategori;
             $row[] = $person->deskripsi;
             if($person->photo)
@@ -59,9 +60,11 @@ class Katalog extends CI_Controller
     
     public function add()
     {
+        $harga = $this->input->post('harga');
+        $harga = preg_replace('/([^0-9\\]])/i', '', $harga);
         $data = array(
             'nama' => $this->input->post('nama'),
-            'harga' => $this->input->post('harga'),
+            'harga' => $harga,
             'kategori' => $this->input->post('kategori'),
             'deskripsi' => $this->input->post('deskripsi')
             );
@@ -84,9 +87,11 @@ class Katalog extends CI_Controller
 
     public function update()
     {
+        $harga = $this->input->post('harga');
+        $harga = preg_replace('/([^0-9\\]])/i', '', $harga);
         $data = array(
             'nama' => $this->input->post('nama'),
-            'harga' => $this->input->post('harga'),
+            'harga' => $harga,
             'kategori' => $this->input->post('kategori'),
             'deskripsi' => $this->input->post('deskripsi')
             );

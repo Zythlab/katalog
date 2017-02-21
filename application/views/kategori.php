@@ -113,7 +113,7 @@ function edit_person(id)
         {
            
             $('[name="id"]').val(data.id_kategori);
-            $('[name="nama"]').val(data.nama);
+            $('[name="nama"]').val(data.nama_kat);
             $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
             $('.modal-title').text('Edit Kategori'); // Set title to Bootstrap modal title
             

@@ -12,7 +12,7 @@
     <div class='col-md-12'>
         <div class='box box-solid'>
             <div class='box-body'>
-                <?php echo form_open('website/save');?>
+                <?php echo form_open_multipart('website/save');?>
                     <?php foreach ($website as $website){ ?>
                     <div class="row">
                         <div class="col-md-6">
@@ -42,12 +42,46 @@
                                 <span class="help-block"></span>
                             </div>
                             <div class="form-group">
+                                <label class="control-label">Slider 1</label>
+                                <input type="hidden" name="ban1" value="<?= $website->banner1 ?>">
+                                <div>
+                                    <?php if($website->banner1 == null) {?>
+                                    (No Photo)
+                                    <?php } else { ?>
+                                    <img src="<?=base_url('upload/'.$website->banner1.'')?>" class="img-responsive" style="max-width:150px">
+                                    <?php } ?>
+                                </div>
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Upload Photo </label>
+                                    <input name="banner1" type="file">
+                                    <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Slider 3</label>
+                                <input type="hidden" name="ban3" value="<?= $website->banner3 ?>">
+                                <div>
+                                    <?php if($website->banner3 == null) {?>
+                                    (No Photo)
+                                    <?php } else { ?>
+                                    <img src="<?=base_url('upload/'.$website->banner3.'')?>" class="img-responsive" style="max-width:150px">
+                                    <?php } ?>
+                                </div>
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Upload Photo </label>
+                                    <input name="banner3" type="file">
+                                    <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label class="control-label" id="label-photo">Website 5</label>
                                 <input name="website6" type="text" class="form-control" value="<?= $website->website6 ?>">
                                 <span class="help-block"></span>
                             </div>
-                        </div>
-                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label" id="label-photo">Website 6</label>
                                 <input name="website7" type="text" class="form-control" value="<?= $website->website7 ?>">
@@ -69,9 +103,21 @@
                                 <span class="help-block"></span>
                             </div>
                             <div class="form-group">
-                                <label class="control-label" id="label-photo">Website 10</label>
-                                <input name="website11" type="text" class="form-control" value="<?= $website->website11 ?>">
+                                <label class="control-label">Slider 2</label>
+                                <input type="hidden" name="ban2" value="<?= $website->banner2 ?>">
+                                <div>
+                                    <?php if($website->banner2 == null) {?>
+                                    (No Photo)
+                                    <?php } else { ?>
+                                    <img src="<?=base_url('upload/'.$website->banner2.'')?>" class="img-responsive" style="max-width:150px">
+                                    <?php } ?>
+                                </div>
                                 <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Upload Photo </label>
+                                    <input name="banner2" type="file">
+                                    <span class="help-block"></span>
                             </div>
                             <div class="form-group">
                                 <div class="pull-right">
